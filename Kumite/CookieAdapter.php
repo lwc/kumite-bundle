@@ -1,6 +1,6 @@
 <?php
 
-namespace NinetyNine\KumiteBundle\Kumite;
+namespace Kumite\KumiteBundle\Kumite;
 
 use DateTime;
 use Symfony\Component\HttpFoundation\Cookie;

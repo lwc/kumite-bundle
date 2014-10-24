@@ -1,6 +1,6 @@
 <?php
 
-namespace NinetyNine\KumiteBundle;
+namespace Kumite\KumiteBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

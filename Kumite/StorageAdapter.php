@@ -1,10 +1,10 @@
 <?php
 
-namespace NinetyNine\KumiteBundle\Kumite;
+namespace Kumite\KumiteBundle\Kumite;
 
 use Doctrine\ORM\EntityManager;
-use NinetyNine\KumiteBundle\Entity\Event;
-use NinetyNine\KumiteBundle\Entity\Participant;
+use Kumite\KumiteBundle\Entity\Event;
+use Kumite\KumiteBundle\Entity\Participant;
 
 class StorageAdapter implements \Kumite\Adapters\StorageAdapter
 {

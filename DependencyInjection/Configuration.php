@@ -1,6 +1,6 @@
 <?php
 
-namespace NinetyNine\KumiteBundle\DependencyInjection;
+namespace Kumite\KumiteBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -23,7 +23,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->scalarNode('storage_adapter')->defaultValue('kumite.storage_adapter.doctrine')->cannotBeEmpty()->end()
             ->scalarNode('cookie_adapter')->defaultValue('kumite.cookie_adapter.symfony')->cannotBeEmpty()->end()
-            ->arrayNode('tests')
+            ->arrayNode('tests')->normalizeKeys(false)
             ->isRequired()
             ->prototype('array')
             ->children()

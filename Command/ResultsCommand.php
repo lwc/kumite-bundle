@@ -1,6 +1,6 @@
 <?php
 
-namespace NinetyNine\KumiteBundle\Command;
+namespace Kumite\KumiteBundle\Command;
 
 use Kumite\Test;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;

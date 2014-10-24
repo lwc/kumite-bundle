@@ -1,6 +1,6 @@
 <?php
 
-namespace NinetyNine\KumiteBundle\Entity;
+namespace Kumite\KumiteBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 

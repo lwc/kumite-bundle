@@ -1,6 +1,6 @@
 <?php
 
-namespace NinetyNine\KumiteBundle\DependencyInjection;
+namespace Kumite\KumiteBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
