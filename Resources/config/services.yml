@@ -1,0 +1,32 @@
+services:
+    kumite.cookie_adapter.symfony:
+        class: NinetyNine\KumiteBundle\Kumite\CookieAdapter
+        arguments:
+            - @request_stack
+        tags:
+            - { name: kernel.event_listener, event: kernel.response, method: onResponse }
+
+    kumite.storage_adapter.doctrine:
+        class: NinetyNine\KumiteBundle\Kumite\StorageAdapter
+        arguments:
+            - @doctrine.orm.entity_manager
+
+    kumite:
+        class: Kumite\Controller
+        arguments:
+            - @kumite.cookie_adapter
+            - @kumite.storage_adapter
+            - %kumite.test_configuration%
+        calls:
+            - [addAllocator, [random, @kumite.allocator.random]]
+            - [addAllocator, [static, @kumite.allocator.static]]
+            - [addAllocator, [ucb1, @kumite.allocator.ucb1]]
+
+    kumite.allocator.random:
+        class: Kumite\Allocators\RandomAllocator
+
+    kumite.allocator.static:
+        class: Kumite\Allocators\StaticAllocator
+
+    kumite.allocator.ucb1:
+        class: Kumite\Allocators\UCB1Allocator

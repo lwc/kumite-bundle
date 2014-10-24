@@ -1,0 +1,21 @@
+{
+    "name": "lwc/kumite-bundle",
+    "description": "Kumite Symfony Bundle",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/dependency-injection": "~2.5",
+        "symfony/config": "~2.5",
+        "symfony/http-kernel": "~2.5",
+        "symfony/console": "~2.5",
+        "symfony/framework-bundle": "~2.5",
+        "lwc/kumite": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.2",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-0": { "Kumite\\KumiteBundle": "" }
+    },
+    "target-dir": "Kumite/KumiteBundle"
+}
