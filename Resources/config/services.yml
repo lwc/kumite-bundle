@@ -9,7 +9,7 @@ services:
     kumite.storage_adapter.doctrine:
         class: Kumite\KumiteBundle\Kumite\StorageAdapter
         arguments:
-            - ?@doctrine.orm.entity_manager
+            - @?doctrine.orm.entity_manager
 
     kumite:
         class: Kumite\Controller
